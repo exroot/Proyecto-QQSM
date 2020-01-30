@@ -35,7 +35,7 @@ public class Respuesta {
         return pregunta_id;
     }
 
-    public void setPreguntaId(Integer pregunta_id) {
+    public void setPregunta(Integer pregunta_id) {
         this.pregunta_id.set(pregunta_id);
     }
 

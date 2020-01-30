@@ -88,7 +88,7 @@ public class Conexion {
     }
     
     // Ejecutar actualización (Para operaciones con Update/Insert/Delete)
-    public static void executeUpdate(String sqlStmt) throws SQLException, ClassNotFoundException, Error {
+    public static void ejecutarUpdate(String sqlStmt) throws SQLException, ClassNotFoundException, Error {
         // Declarar statement como null
         Statement statement = null;
         try {

@@ -46,7 +46,7 @@ public class Pregunta {
         return categoria_id;
     }
 
-    public void setCategoriaId(Integer categoria_id) {
+    public void setCategoria(Integer categoria_id) {
         this.categoria_id.set(categoria_id);
     }
     
