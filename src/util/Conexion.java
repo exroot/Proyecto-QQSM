@@ -1,13 +1,12 @@
 package util;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import com.sun.rowset.CachedRowSetImpl;
 
 // https://www.swtestacademy.com/database-operations-javafx/
 
 public class Conexion {
 
-    protected Connection conn = null;
+    protected static Connection conn = null;
     private static Conexion conecto;
     private static String connStr = "jdbc:mysql://localhost/newdatabase";
 
@@ -19,9 +18,11 @@ public class Conexion {
             conecto = new Conexion();
         }
         return conecto;
-    }    
+    }
     
-    public Connection Conectar() throws Error  {
+    
+    // Conexión a DB
+    public static Connection Conectar() throws Error  {
         try{
             conn = DriverManager.getConnection(connStr,"exroot",""); 
         }
@@ -34,7 +35,8 @@ public class Conexion {
         return conn;
     }
     
-    public void Desconectar() throws Error {
+    // Desconexión a DB
+    public static void Desconectar() throws Error {
         try {
             if(conn != null && !conn.isClosed()){
                 conn.close();
@@ -42,5 +44,70 @@ public class Conexion {
         } catch (SQLException ex) {
            throw new Error(2);
         }
-    }    
+    }
+
+
+    // Ejecutar consulta en DB
+    public static ResultSet ejecutarQuery(String queryStmt) throws SQLException, ClassNotFoundException, Error {
+        // Declarar statement, resultSet and CachedResultSet como null
+        Statement statement = null;
+        ResultSet resultSet = null;
+        CachedRowSetImpl crs = null;
+        try {
+            // Conectar a DB
+            Conectar();
+            
+            // Crear statement
+            statement = conn.createStatement();
+ 
+            // Ejecutar operación (query)
+            resultSet = statement.executeQuery(queryStmt);
+            
+            // Implementación de CachedRowSet
+            // A manera de prevenir el error "java.sql.SQLRecoverableException: Closed Connection: next"
+            // Usaremos CachedRowSet
+            crs = new CachedRowSetImpl();
+            crs.populate(resultSet);
+        } catch (SQLException e) {
+            System.out.println("Un problema ocurrió con la operación executeQuery." + e);
+            throw e;
+        } finally {
+            if (resultSet != null) {
+                // Cerrar resultSet
+                resultSet.close();
+            }
+            if (statement != null) {
+                // Cerrar statement
+                statement.close();
+            }
+            // Cerrar conexión
+            Desconectar();
+        }
+        // Retornar CachedRowSet
+        return crs;
+    }
+    
+    // Ejecutar actualización (Para operaciones con Update/Insert/Delete)
+    public static void executeUpdate(String sqlStmt) throws SQLException, ClassNotFoundException, Error {
+        // Declarar statement como null
+        Statement statement = null;
+        try {
+            //  Conectar a DB
+            Conectar();
+            // Crear statement
+            statement = conn.createStatement();
+            // Correr operación executeUpdate con el sql statement
+            statement.executeUpdate(sqlStmt);
+        } catch (SQLException e) {
+            System.out.println("Un problema ocurrió con la operación executeUpdate." + e);
+            throw e;
+        } finally {
+            if (statement != null) {
+                // Cerrar statement
+                statement.close();
+            }
+            // Cerrar conexión
+            Desconectar();
+        }
+    }
 }
