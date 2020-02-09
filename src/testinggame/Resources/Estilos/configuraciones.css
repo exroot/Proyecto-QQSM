@@ -1,0 +1,76 @@
+#Fondo{
+    -fx-background-image: url('../Images/fondo.png');
+}
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #c54e2c;
+}
+    .jfx-tab-pane .tab-header-area .control-buttons-tab .jfx-rippler {
+        -jfx-rippler-fill: #ea7f4b; 
+    }
+        .jfx-tab-pane .headers-region > .tab-selected-line{
+            -fx-background-color: violet;
+            -fx-pref-width: 1px !important;
+            -fx-pref-height: 2px;
+        }
+
+.genericAnchor{
+    -fx-background-color: rgba(215, 114, 226, 0.5); 
+}
+    .genericAnchorB{
+        -fx-background-color: rgba(153, 217, 234, 0.5);;
+    }
+
+.botonesBase{
+    -fx-padding: 8 15 15 15;
+    
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 4,0,0,1);
+    
+    -fx-text-fill: snow;
+    -fx-font-size: 20;
+    -fx-alignment: center-right;
+        
+    
+}
+.botonesBase:hover{
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+.botonesBase:pressed{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+.tfBase{
+    -fx-background-color: rgba(0,0,0,0.2);
+    -jfx-unfocus-color: #d86e3a;
+    -jfx-focus-color: #c54e2c;
+    
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 20;
+}
+
+#lbError{
+    -fx-text-fill: Red;
+    -fx-font-size: 30;
+    -fx-alignment: center;
+    
+}
+
+#moreEffects{
+    -fx-background-color:
+        linear-gradient(#64037c, #3a00df);
+    -fx-background-radius: 30;
+    
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 11,0,5,5); 
+}

@@ -1,0 +1,74 @@
+#Fondo{
+    -fx-background-image: url('../Images/fondo.png');
+}
+
+#anchorLogin{
+    -fx-background-color:
+        linear-gradient(#64037c, #3a00df);
+    -fx-background-insets: 20;
+    -fx-background-radius: 30;
+    
+    -fx-border-color:
+        linear-gradient(#64037c, #3a00df);
+    -fx-border-width: 10;
+    -fx-border-radius: 30;
+    -fx-border-style: segments(10,2,5,7);
+    
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 11,0,5,5);  
+}
+
+.tfBase{
+    -fx-background-color: rgba(0,0,0,0.2);
+    -jfx-unfocus-color: #d86e3a;
+    -jfx-focus-color: #c54e2c;
+    
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 22;
+}
+
+.botonesBase{
+    -fx-padding: 8 15 15 15;
+    
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 4,0,0,1);
+    
+    -fx-font-family: "Arial";
+    -fx-text-fill: snow;
+    -fx-font-size: 15;
+        
+    
+}
+
+.botonesBase:hover{
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+
+.botonesBase:pressed{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+#lbError{
+    -fx-text-fill: Red;
+    -fx-font-size: 30;
+    -fx-alignment: center;
+}
+
+#moreEffects{
+    -fx-background-color:
+        linear-gradient(#64037c, #3a00df);
+    -fx-background-insets: 20;
+    -fx-background-radius: 30;
+}
+
+

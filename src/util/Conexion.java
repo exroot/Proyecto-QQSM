@@ -2,13 +2,11 @@ package util;
 import java.sql.*;
 import com.sun.rowset.CachedRowSetImpl;
 
-// https://www.swtestacademy.com/database-operations-javafx/
-
 public class Conexion {
 
     protected static Connection conn = null;
     private static Conexion conecto;
-    private static String connStr = "jdbc:mysql://localhost/newdatabase";
+    private final static String connStr = "jdbc:mysql://localhost/juego";
 
     public Conexion() {
     }
@@ -24,7 +22,7 @@ public class Conexion {
     // Conexión a DB
     public static Connection Conectar() throws Error  {
         try{
-            conn = DriverManager.getConnection(connStr,"exroot",""); 
+            conn = DriverManager.getConnection(connStr,"exroot","nevera123"); 
         }
         catch(SQLException ex){
 //            System.out.println("Connection Failed! Check output console" + e);

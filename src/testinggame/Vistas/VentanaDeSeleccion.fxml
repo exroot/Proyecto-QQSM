@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="PanelC" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testinggame.Controladores.VentanaDeSeleccionController">
+   <children>
+      <AnchorPane fx:id="Fondo" prefHeight="650.0" prefWidth="900.0" stylesheets="@../Resources/Estilos/ventanadeseleccion.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="231.0" fitWidth="294.0" layoutX="322.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Images/Logotipo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="163.0" fitWidth="425.0" layoutX="239.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Images/LogotipoB.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bttnConfiguraciones" layoutX="238.0" layoutY="466.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="400.0" styleClass="botonesBase" text="Configuraciones">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../Resources/Icons/Settings_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="bttnSalir" layoutX="313.0" layoutY="565.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="250.0" styleClass="botonesBase" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../Resources/Icons/Exit_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="bttnIniciarJuego" layoutX="243.0" layoutY="270.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="400.0" styleClass="botonesBase" text="Empezar Juego">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../Resources/Icons/Game%20Controller_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="bttnTablaPuntaje" layoutX="243.0" layoutY="368.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="400.0" styleClass="botonesBase" text="Tabla de Puntación">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../Resources/Icons/View%20Details_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <AnchorPane fx:id="Alerta" layoutX="262.0" layoutY="216.0" prefHeight="250.0" prefWidth="138.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="109.0" prefHeight="58.0" prefWidth="334.0" style="-fx-text-fill: snow; -fx-font-size: 35;" text="¿Está Seguro?" />
+                  <Button fx:id="alertAceptar" layoutX="55.0" layoutY="175.0" mnemonicParsing="false" style="-fx-font-size: 20;" styleClass="botonesBase" text="Aceptar" />
+                  <Button fx:id="alertCancelar" layoutX="203.0" layoutY="175.0" mnemonicParsing="false" style="-fx-font-size: 20;" styleClass="botonesBase" text="Cancelar" />
+                  <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="128.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/Icons/icons8-escudo-de-advertencia-96.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

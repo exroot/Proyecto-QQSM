@@ -1,0 +1,13 @@
+.estiloGeneral{
+    -fx-background-color: black;
+    -fx-background-radius: 50;
+}
+#Cerrar{
+    -fx-background-color: tomato;
+}
+#Maximizar{
+    -fx-background-color: lightsteelblue;
+}
+#Minimizar{
+    -fx-background-color: burlywood;
+}

@@ -1,0 +1,38 @@
+#Fondo{
+    -fx-background-image: url('../Images/fondo.png');
+    -fx-background-size: cover, auto;
+    -fx-background-repeat: no-repeat;
+}
+
+.bttnBasics{
+    -fx-background-color: transparent;
+    -fx-background-image: url('../Images/BotonSeleccion.png');
+    -fx-background-size: cover, auto;
+    -fx-background-repeat: no-repeat;
+    
+    -fx-text-fill: snow;
+    -fx-font-size: 20;
+}
+#PreguntaLabel{
+    -fx-text-fill: snow;
+    -fx-font-size: 25;
+}
+
+#MoneyLabel{
+    -fx-text-fill: snow;
+    -fx-font-size: 35;
+}
+
+.TextosF{
+    -fx-text-fill: snow;
+    -fx-font-size: 18;
+
+}
+
+#cincuentaCincuenta{
+    -fx-background-color: transparent;
+    -fx-background-image: url('../Images/fiftyFifty_H.png');
+    -fx-background-size: cover, auto;
+    -fx-background-repeat: no-repeat;
+}
+

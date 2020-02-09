@@ -2,9 +2,11 @@ CREATE DATABASE juego;
 
 CREATE TABLE usuarios (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nombre_y_apellido VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL UNIQUE,
-    cedula INT UNSIGNED NOT NULL UNIQUE,
     contraseña VARCHAR(255) NOT NULL,
+    fecha_de_nacimiento DATE NOT NULL,
+    sexo VARCHAR(1) NOT NULL,
     puntaje DECIMAL,
     PRIMARY KEY (id)
 );

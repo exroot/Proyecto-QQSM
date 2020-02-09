@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/exroot/Documents/NetBeansProjects/ultimo/src/modelos/Respuesta.java</file>
-            <file>file:/C:/Users/exroot/Documents/NetBeansProjects/ultimo/src/modelos/Usuario.java</file>
-            <file>file:/C:/Users/exroot/Documents/NetBeansProjects/ultimo/src/modelos/Pregunta.java</file>
+            <file>file:/C:/Users/exroot/Documents/TestingGame/src/testinggame/Modelos/UsuarioDAO.java</file>
+            <file>file:/C:/Users/exroot/Documents/TestingGame/src/testinggame/Controladores/RegistroController.java</file>
+            <file>file:/C:/Users/exroot/Documents/TestingGame/src/testinggame/Controladores/ConfiguracionesController.java</file>
         </group>
     </open-files>
 </project-private>
